@@ -1,0 +1,48 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 40px;
+  margin-bottom: 20px;
+}
+
+.home-banner {
+  position: relative;
+  width: 100%;
+  height: 150px; /* You can change the height */
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.home-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(33%);
+}
+
+.home-banner p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.cards-container {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 25px;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+}
