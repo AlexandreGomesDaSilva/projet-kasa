@@ -4,7 +4,7 @@ import "./Card.scss";
 
 const Card = ({ title, imageUrl, id }) => {
   return (
-    <Link to={`/product/${id}`} className="card">
+    <Link to={`/logement/${id}`} className="card">
       <img src={imageUrl} alt={title} />
       <h2>{title}</h2>
     </Link>

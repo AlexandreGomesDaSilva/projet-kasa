@@ -1,0 +1,152 @@
+.logement {
+  padding: 0px 40px;
+  margin-bottom: 20px;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  /* Bouton précédent (gauche) */
+  button:first-child {
+    left: 20px;
+  }
+
+  /* Bouton suivant (droite) */
+  button:last-child {
+    right: 20px;
+  }
+
+  button:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.logement-title-and-host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logement-title {
+    h2 {
+      font-size: 1.8rem;
+      font-weight: normal;
+      color: #ff5a5f;
+      margin: 0;
+    }
+
+    p {
+      font-size: 0.75rem;
+      color: black;
+    }
+  }
+
+  .logement-host {
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+    span {
+      color: #ff5a5f;
+      margin-right: 0.5rem;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}
+
+.logement-tags-and-rating {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+
+  .logement-tags {
+    display: flex;
+    gap: 0.5rem;
+
+    span {
+      background-color: #ff5a5f;
+      color: white;
+      padding: 0.25rem 0.5rem;
+      border-radius: 10px;
+      font-size: 0.5rem;
+      font-weight: bold;
+    }
+  }
+
+  .logement-rating {
+    display: flex;
+    gap: 0.25rem;
+  }
+}
+
+.logement-collapse {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  > div {
+    flex: 1;
+  }
+
+  .collapse-header {
+    background-color: #ff6060;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .collapse-content {
+    background-color: #f6f6f6;
+    color: #000;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  li {
+    list-style: none;
+  }
+}

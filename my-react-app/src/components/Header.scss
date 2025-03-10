@@ -4,32 +4,32 @@ header {
   align-items: center;
   padding: 0px 40px;
   margin: 20px 0;
-}
 
-header h1 {
-  color: #ff6060;
-  font-size: 64px;
-  font-weight: normal;
-  margin: 0;
-}
+  h1 {
+    color: #ff6060;
+    font-size: 64px;
+    font-weight: normal;
+    margin: 0;
+  }
 
-header ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
 
-header li {
-  margin-left: 50px;
-}
+  li {
+    margin-left: 50px;
+  }
 
-header a {
-  color: #000;
-  text-decoration: none;
-  font-weight: normal;
-}
+  a {
+    color: #000;
+    text-decoration: none;
+    font-weight: normal;
+  }
 
-header a:hover {
-  box-shadow: 0 2px 0 #000;
+  a:hover {
+    box-shadow: 0 2px 0 #000;
+  }
 }

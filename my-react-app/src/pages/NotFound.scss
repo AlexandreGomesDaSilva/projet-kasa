@@ -1,33 +1,34 @@
-.not-found span,
-.not-found p,
-.not-found a {
+.not-found {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
-}
 
-.not-found span {
-  font-size: 128px;
-  font-weight: bold;
-  color: #ff6060;
-}
+  span {
+    font-size: 128px;
+    font-weight: bold;
+    color: #ff6060;
+    margin-bottom: 3rem;
+  }
 
-.not-found p {
-  font-size: 24px;
-  font-weight: normal;
-  color: #ff6060;
-}
+  p {
+    font-size: 24px;
+    font-weight: normal;
+    color: #ff6060;
+    margin-bottom: 3rem;
+  }
 
-.not-found a {
-  font-size: 14px;
-  font-weight: normal;
-  color: #000;
-  text-decoration: none;
-}
+  a {
+    font-size: 14px;
+    font-weight: normal;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 3rem;
+  }
 
-.not-found a:hover {
-  text-decoration: underline;
+  a:hover {
+    text-decoration: underline;
+  }
 }
