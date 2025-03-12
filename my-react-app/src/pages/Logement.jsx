@@ -71,39 +71,39 @@ function Logement() {
             <SvgRight />
           </button>
         </div>
-        <div>
-          <div className="logement-title-and-host">
+        <div className="logement-infos">
+          <div className="logement-title-and-tags">
             <div className="logement-title">
               <h2>{logement.title}</h2>
               <p>{logement.location}</p>
             </div>
-            <div className="logement-host">
-              <span>{logement.host.name}</span>
-              <img src={logement.host.picture} alt={logement.host.name}></img>
-            </div>
-          </div>
-          <div className="logement-tags-and-rating">
             <div className="logement-tags">
               {logement.tags.map((tag, index) => (
                 <span key={index}>{tag}</span>
               ))}
             </div>
+          </div>
+          <div className="logement-host-and-rating">
+            <div className="logement-host">
+              <span>{logement.host.name}</span>
+              <img src={logement.host.picture} alt={logement.host.name}></img>
+            </div>
             <div className="logement-rating">
               {renderStars(logement.rating)}
             </div>
           </div>
-          <div className="logement-collapse">
-            <Collapse title="Description">
-              <p>{logement.description}</p>
-            </Collapse>
-            <Collapse title="Équipements">
-              <ul>
-                {logement.equipments.map((equipment, index) => (
-                  <li key={index}>{equipment}</li>
-                ))}
-              </ul>
-            </Collapse>
-          </div>
+        </div>
+        <div className="logement-collapse">
+          <Collapse title="Description">
+            <p>{logement.description}</p>
+          </Collapse>
+          <Collapse title="Équipements">
+            <ul>
+              {logement.equipments.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+              ))}
+            </ul>
+          </Collapse>
         </div>
       </main>
       <Footer />
