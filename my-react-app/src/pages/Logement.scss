@@ -156,3 +156,74 @@
     list-style: none;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .logement {
+    padding: 0px 20px;
+  }
+
+  .wrapper {
+    height: 200px;
+
+    button {
+      background: none;
+      transition: none;
+    }
+
+    button:first-child {
+      left: 1px;
+    }
+
+    button:last-child {
+      right: 1px;
+    }
+
+    button:hover {
+      background: none;
+    }
+  }
+
+  .logement-infos {
+    flex-direction: column;
+
+    .logement-title-and-tags {
+      margin-bottom: 1rem;
+    }
+
+    .logement-title {
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .logement-tags {
+      flex-wrap: wrap;
+      span {
+        font-size: 0.75rem;
+        padding: 0.25rem 2rem;
+      }
+    }
+  }
+
+  .logement-host-and-rating {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+
+    .logement-host {
+      span {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  .logement-collapse {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}

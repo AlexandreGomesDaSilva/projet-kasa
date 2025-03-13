@@ -46,3 +46,31 @@
   background-color: #f6f6f6;
   border-radius: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .home {
+    padding: 0px 20px;
+  }
+
+  .home-banner {
+    height: 100px;
+
+    p {
+      font-size: 24px;
+      left: 36%;
+    }
+  }
+
+  .cards-container {
+    gap: 15px;
+    padding: 0;
+    background: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    a {
+      width: 100%;
+    }
+  }
+}

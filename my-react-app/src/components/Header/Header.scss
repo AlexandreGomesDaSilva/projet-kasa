@@ -33,3 +33,26 @@ header {
     box-shadow: 0 2px 0 #000;
   }
 }
+
+@media screen and (max-width: 768px) {
+  header {
+    margin: 10px 0;
+    padding: 0px 15px;
+
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    h1 {
+      font-size: 48px;
+    }
+
+    li {
+      margin: 0;
+    }
+    li:nth-child(2) {
+      margin-left: 20px;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import SvgDown from "../svg/SvgDown.jsx";
-import SvgUp from "../svg/SvgUp.jsx";
+import SvgDown from "../Svg/SvgDown.jsx";
+import SvgUp from "../Svg/SvgUp.jsx";
 import "./Collapse.scss";
 
 const Collapse = ({ title, children }) => {

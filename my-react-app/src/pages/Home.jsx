@@ -1,8 +1,8 @@
 // @ts-nocheck
 import React from "react";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
-import Card from "../components//Card/Card";
+import Header from "../components/Header/Header.jsx";
+import Footer from "../components/Footer/Footer.jsx";
+import Card from "../components//Card/Card.jsx";
 import { useEffect, useState } from "react";
 import "./Home.scss";
 

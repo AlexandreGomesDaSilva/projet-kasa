@@ -8,13 +8,9 @@ footer {
 
   h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 48px;
     margin: 20px 0 10px 0;
     font-weight: normal;
-  }
-
-  svg {
-    margin-right: 2px;
   }
 
   p {
@@ -22,5 +18,24 @@ footer {
     font-size: 16px;
     margin: 10px 0;
     font-weight: normal;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 40px 0;
+
+    h1 {
+      font-size: 36px;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    p {
+      font-size: 14px;
+    }
   }
 }
