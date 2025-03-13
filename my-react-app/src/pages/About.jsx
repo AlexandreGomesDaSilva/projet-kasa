@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Collapse from "../components/Collapse";
+import Header from "../components/Header/Header.jsx";
+import Footer from "../components/Footer/Footer.jsx";
+import Collapse from "../components/Collapse/Collapse.jsx";
 import "./About.scss";
 
 const aboutArray = {
@@ -33,7 +33,10 @@ function About() {
       <Header />
       <main className="about">
         <div className="about-banner">
-          <img src="../images/montagnes.webp" alt="Photo d'une montagne" />
+          <img
+            src="../assets/images/montagnes.webp"
+            alt="Photo d'une montagne"
+          />
         </div>
         {Object.values(aboutArray).map((item, index) => (
           <Collapse key={index} title={item.title}>

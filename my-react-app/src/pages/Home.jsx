@@ -1,8 +1,8 @@
 // @ts-nocheck
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Card from "../components/Card";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
+import Card from "../components//Card/Card";
 import { useEffect, useState } from "react";
 import "./Home.scss";
 
@@ -23,7 +23,10 @@ function Home() {
       <Header />
       <main className="home">
         <div className="home-banner">
-          <img src="../images/bord-de-mer.webp" alt="Photo du bord de mer" />
+          <img
+            src="../assets/images/bord-de-mer.webp"
+            alt="Photo du bord de mer"
+          />
           <p>Chez vous, partout et ailleurs</p>
         </div>
         <div className="cards-container">

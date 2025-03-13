@@ -2,15 +2,13 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Logement.scss";
-import Header from "../components/Header.jsx";
-import Footer from "../components/Footer.jsx";
-import {
-  SvgLeft,
-  SvgRight,
-  SvgFilledStar,
-  SvgEmptyStar,
-} from "../components/Svg";
-import Collapse from "../components/Collapse.jsx";
+import Header from "../components/Header/Header.jsx";
+import Footer from "../components/Footer/Footer";
+import SvgLeft from "../components/Svg/SvgLeft.jsx";
+import SvgRight from "../components/Svg/SvgRight.jsx";
+import SvgFilledStar from "../components/Svg/SvgFilledStar.jsx";
+import SvgEmptyStar from "../components/Svg/SvgEmptyStar.jsx";
+import Collapse from "../components/Collapse/Collapse.jsx";
 
 function Logement() {
   const { id } = useParams();
