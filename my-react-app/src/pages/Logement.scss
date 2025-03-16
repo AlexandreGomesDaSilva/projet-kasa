@@ -48,6 +48,17 @@
   button:hover {
     background: rgba(0, 0, 0, 0.8);
   }
+
+  .image-counter {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
 }
 
 .logement-infos {

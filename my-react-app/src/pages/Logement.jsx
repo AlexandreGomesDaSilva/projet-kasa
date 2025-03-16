@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Logement.scss";
@@ -65,6 +64,9 @@ function Logement() {
             src={logement.pictures[currentImageIndex]}
             alt={`Logement ${currentImageIndex + 1}`}
           />
+          <div className="image-counter">
+            {currentImageIndex + 1}/{logement.pictures.length}
+          </div>
           <button onClick={handleNextClick}>
             <SvgRight />
           </button>
