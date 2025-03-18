@@ -26,6 +26,10 @@ function Logement() {
       );
   }, [id]);
 
+  if (!logement) {
+    return <div>Chargement...</div>;
+  }
+
   const handlePrevClick = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? logement.pictures.length - 1 : prevIndex - 1
@@ -37,10 +41,6 @@ function Logement() {
       prevIndex === logement.pictures.length - 1 ? 0 : prevIndex + 1
     );
   };
-
-  if (!logement) {
-    return <div>Chargement...</div>;
-  }
 
   const renderStars = (rating) => {
     const stars = [];
@@ -57,19 +57,25 @@ function Logement() {
       <Header />
       <main className="logement">
         <div className="wrapper">
-          <button onClick={handlePrevClick}>
-            <SvgLeft />
-          </button>
+          {logement.pictures.length > 1 && (
+            <button onClick={handlePrevClick}>
+              <SvgLeft />
+            </button>
+          )}
           <img
             src={logement.pictures[currentImageIndex]}
             alt={`Logement ${currentImageIndex + 1}`}
           />
-          <div className="image-counter">
-            {currentImageIndex + 1}/{logement.pictures.length}
-          </div>
-          <button onClick={handleNextClick}>
-            <SvgRight />
-          </button>
+          {logement.pictures.length > 1 && (
+            <div className="image-counter">
+              {currentImageIndex + 1}/{logement.pictures.length}
+            </div>
+          )}
+          {logement.pictures.length > 1 && (
+            <button onClick={handleNextClick}>
+              <SvgRight />
+            </button>
+          )}
         </div>
         <div className="logement-infos">
           <div className="logement-title-and-tags">
