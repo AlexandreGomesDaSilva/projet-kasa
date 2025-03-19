@@ -2,14 +2,14 @@ import React from "react";
 import SvgLeft from "../Svg/SvgLeft.jsx";
 import SvgRight from "../Svg/SvgRight.jsx";
 
-const Wrapper = ({
+const Slider = ({
   pictures,
   currentImageIndex,
   handlePrevClick,
   handleNextClick,
 }) => {
   return (
-    <div className="wrapper">
+    <div className="slider">
       {pictures.length > 1 && (
         <button onClick={handlePrevClick}>
           <SvgLeft />
@@ -33,4 +33,4 @@ const Wrapper = ({
   );
 };
 
-export default Wrapper;
+export default Slider;

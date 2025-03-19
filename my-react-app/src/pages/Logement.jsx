@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Logement.scss";
-import Wrapper from "../components/Wrapper/Wrapper.jsx";
+import Slider from "../components/Slider/Slider.jsx";
 import Tags from "../components/Tags/Tags.jsx";
 import Rating from "../components/Rating/Rating.jsx";
 import Collapse from "../components/Collapse/Collapse.jsx";
@@ -43,7 +43,7 @@ function Logement() {
   return (
     <div>
       <main className="logement">
-        <Wrapper
+        <Slider
           pictures={logement.pictures}
           currentImageIndex={currentImageIndex}
           handlePrevClick={handlePrevClick}
