@@ -34,6 +34,7 @@
     color: #fff;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
       1px 1px 0 #000;
+    white-space: nowrap;
   }
 }
 
@@ -47,7 +48,17 @@
   border-radius: 10px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 741px) and (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    a {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 740px) {
   .home {
     padding: 0px 20px;
   }
@@ -56,8 +67,10 @@
     height: 100px;
 
     p {
-      font-size: 24px;
+      font-size: 18px;
       left: 36%;
+      white-space: wrap;
+      text-shadow: none;
     }
   }
 

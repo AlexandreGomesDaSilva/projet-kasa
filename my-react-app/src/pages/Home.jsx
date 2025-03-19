@@ -1,13 +1,11 @@
 // @ts-nocheck
-import React from "react";
-import Header from "../components/Header/Header.jsx";
-import Footer from "../components/Footer/Footer.jsx";
-import Card from "../components//Card/Card.jsx";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import Card from "../components/Card/Card.jsx";
 import "./Home.scss";
 
 function Home() {
   const [logements, setLogements] = useState([]);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     fetch("../data/logements.json")
@@ -16,6 +14,16 @@ function Home() {
       .catch((error) =>
         console.error("Erreur lors de la récupération des données :", error)
       );
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 740);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
@@ -26,7 +34,16 @@ function Home() {
             src="../assets/images/bord-de-mer.webp"
             alt="Photo du bord de mer"
           />
-          <p>Chez vous, partout et ailleurs</p>
+          <p>
+            {isMobile ? (
+              <>
+                Chez vous, <br />
+                partout et ailleurs
+              </>
+            ) : (
+              "Chez vous, partout et ailleurs"
+            )}
+          </p>
         </div>
         <div className="cards-container">
           {logements.map((logement) => (

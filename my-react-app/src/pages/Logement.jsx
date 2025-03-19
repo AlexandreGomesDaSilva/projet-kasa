@@ -6,6 +6,7 @@ import Slider from "../components/Slider/Slider.jsx";
 import Tags from "../components/Tags/Tags.jsx";
 import Rating from "../components/Rating/Rating.jsx";
 import Collapse from "../components/Collapse/Collapse.jsx";
+import NotFound from "./NotFound.jsx";
 
 function Logement() {
   const { id } = useParams();
@@ -24,6 +25,10 @@ function Logement() {
       );
   }, [id]);
 
+  if (!logement) {
+    return <NotFound />;
+  }
+
   const handlePrevClick = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? logement.pictures.length - 1 : prevIndex - 1
@@ -35,10 +40,6 @@ function Logement() {
       prevIndex === logement.pictures.length - 1 ? 0 : prevIndex + 1
     );
   };
-
-  if (!logement) {
-    return <div>Chargement...</div>;
-  }
 
   return (
     <div>
