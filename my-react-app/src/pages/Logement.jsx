@@ -2,12 +2,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Logement.scss";
-import Header from "../components/Header/Header.jsx";
-import Footer from "../components/Footer/Footer";
-import SvgLeft from "../components/Svg/SvgLeft.jsx";
-import SvgRight from "../components/Svg/SvgRight.jsx";
-import SvgFilledStar from "../components/Svg/SvgFilledStar.jsx";
-import SvgEmptyStar from "../components/Svg/SvgEmptyStar.jsx";
+import Wrapper from "../components/Wrapper/Wrapper.jsx";
+import Tags from "../components/Tags/Tags.jsx";
+import Rating from "../components/Rating/Rating.jsx";
 import Collapse from "../components/Collapse/Collapse.jsx";
 
 function Logement() {
@@ -27,10 +24,6 @@ function Logement() {
       );
   }, [id]);
 
-  if (!logement) {
-    return <div>Chargement...</div>;
-  }
-
   const handlePrevClick = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? logement.pictures.length - 1 : prevIndex - 1
@@ -43,60 +36,33 @@ function Logement() {
     );
   };
 
-  const renderStars = (rating) => {
-    const stars = [];
-    for (let i = 1; i <= 5; i++) {
-      stars.push(
-        i <= rating ? <SvgFilledStar key={i} /> : <SvgEmptyStar key={i} />
-      );
-    }
-    return stars;
-  };
+  if (!logement) {
+    return <div>Chargement...</div>;
+  }
 
   return (
     <div>
       <main className="logement">
-        <div className="wrapper">
-          {logement.pictures.length > 1 && (
-            <button onClick={handlePrevClick}>
-              <SvgLeft />
-            </button>
-          )}
-          <img
-            src={logement.pictures[currentImageIndex]}
-            alt={`Logement ${currentImageIndex + 1}`}
-          />
-          {logement.pictures.length > 1 && (
-            <div className="image-counter">
-              {currentImageIndex + 1}/{logement.pictures.length}
-            </div>
-          )}
-          {logement.pictures.length > 1 && (
-            <button onClick={handleNextClick}>
-              <SvgRight />
-            </button>
-          )}
-        </div>
+        <Wrapper
+          pictures={logement.pictures}
+          currentImageIndex={currentImageIndex}
+          handlePrevClick={handlePrevClick}
+          handleNextClick={handleNextClick}
+        />
         <div className="logement-infos">
           <div className="logement-title-and-tags">
             <div className="logement-title">
               <h2>{logement.title}</h2>
               <p>{logement.location}</p>
             </div>
-            <div className="logement-tags">
-              {logement.tags.map((tag, index) => (
-                <span key={index}>{tag}</span>
-              ))}
-            </div>
+            <Tags tags={logement.tags} />
           </div>
           <div className="logement-host-and-rating">
             <div className="logement-host">
               <span>{logement.host.name}</span>
               <img src={logement.host.picture} alt={logement.host.name}></img>
             </div>
-            <div className="logement-rating">
-              {renderStars(logement.rating)}
-            </div>
+            <Rating rating={logement.rating} />
           </div>
         </div>
         <div className="logement-collapse">
