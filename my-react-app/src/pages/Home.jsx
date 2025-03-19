@@ -20,7 +20,6 @@ function Home() {
 
   return (
     <div>
-      <Header />
       <main className="home">
         <div className="home-banner">
           <img
@@ -40,7 +39,6 @@ function Home() {
           ))}
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Logement.scss";
@@ -54,7 +55,6 @@ function Logement() {
 
   return (
     <div>
-      <Header />
       <main className="logement">
         <div className="wrapper">
           {logement.pictures.length > 1 && (
@@ -112,7 +112,6 @@ function Logement() {
           </Collapse>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

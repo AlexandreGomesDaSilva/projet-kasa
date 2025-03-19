@@ -7,13 +7,11 @@ import "./NotFound.scss";
 function NotFound() {
   return (
     <div>
-      <Header />
       <div className="not-found">
         <span>404</span>
         <p>Oups! La page que vous demandez n'existe pas.</p>
         <Link to="/">Retourner sur la page d'accueil</Link>
       </div>
-      <Footer />
     </div>
   );
 }

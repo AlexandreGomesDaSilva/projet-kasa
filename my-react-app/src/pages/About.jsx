@@ -30,7 +30,6 @@ const aboutArray = {
 function About() {
   return (
     <div>
-      <Header />
       <main className="about">
         <div className="about-banner">
           <img
@@ -44,7 +43,6 @@ function About() {
           </Collapse>
         ))}
       </main>
-      <Footer />
     </div>
   );
 }
