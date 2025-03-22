@@ -29,7 +29,7 @@ Ce projet met en œuvre des concepts avancés de développement front-end avec R
    `cd projet-kasa`
 
 3. Installez les dépendances :
-   `npm install
+   `npm install`
 
 4. Lancez le projet en mode développement :
    `npm run dev`
