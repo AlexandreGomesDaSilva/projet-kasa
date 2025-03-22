@@ -39,10 +39,10 @@ Ce projet met en œuvre des concepts avancés de développement front-end avec R
 
 ## Structure du projet
 
-src/components : Composants réutilisables (Header, Footer, Slider, etc.).
-src/pages : Pages principales de l'application (Home, Logement, About, NotFound).
-src/assets : Images et autres ressources statiques.
-src/styles : Fichiers SCSS pour les styles globaux et spécifiques.
+- src/components : Composants réutilisables (Header, Footer, Slider, etc.).
+- src/pages : Pages principales de l'application (Home, Logement, About, NotFound).
+- src/assets : Images et autres ressources statiques.
+- src/styles : Fichiers SCSS pour les styles globaux et spécifiques.
 
 ## Auteur
 
